@@ -23,3 +23,31 @@ body {
     font-size: 25px;
     cursor: pointer;
 }
+
+.ticket {
+    max-width: 700px;
+    background: white;
+    margin: 40px auto 0;
+    padding: 40px;
+    border-radius: 10px;
+    color: black;
+}
+
+.ticket__question {
+    text-align: center;
+    font-size: 40px;
+}
+
+.ticket__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: 15px 0;
+    font-size: 25px;
+}
+
+.ticket__count {
+    font-size: 30px;
+    font-weight: bold;
+}
