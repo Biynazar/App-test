@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+.title {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 40px;
+    color: orange;
+}
+
+.start {
+    padding: 20px 40px;
+    margin-left: 40px;
+    margin-top: 30px;
+    font-size: 25px;
+    cursor: pointer;
+}
