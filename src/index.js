@@ -67,3 +67,49 @@ let questions = [
         trueAnswer: 1 // Индекс 1 соответствует ответу join
     }
 ];
+
+let ticket = document.querySelector('.ticket');
+
+let count = 1
+
+
+const setTicket = () => {
+    ticket.innerHTML = `
+      <h2 class="ticket__question">${questions[count - 1].question}</h2>
+    <ul class="ticket__list"></ul>
+    <div class="ticket__count">${count} / ${questions.length}</div>
+    <button class="ticket__next">${count === questions.length ? 'End' : 'Next'}</button>
+    `;
+
+    let ticketList = document.querySelector('.ticket__list');
+    questions[count - 1].answers.forEach((item, idx) => {
+        let li = document.createElement('li')
+        li.innerHTML = `
+        <label class='ticket__label'>
+        <input type='radio' name='question'>
+        <span class='ticket__text'></span>
+        </label>
+        `;
+        ticketList.append(li)
+
+        let span = document.querySelectorAll('.ticket__text');
+        span[idx].textContent = item
+    })
+
+    let btn = document.querySelector('.ticket__next');
+    btn.addEventListener('click', () => {
+        
+
+        if(count === questions.length) {
+            alert('Вы закончили тест')
+        } else {
+            count++;
+            setTicket();
+        }
+    })
+}
+
+setTicket()
+
+
+
